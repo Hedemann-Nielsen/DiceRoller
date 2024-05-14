@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="./DiceRoller.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+		<link rel="stylesheet" href="./style.css" />
+		<title>Dice Roller</title>
+	</head>
+	<body>
+		<div class="centerContainer">
+			<div class="flexContainer">
+				<p>Player 1 har:</p>
+				<p id="playerOneScore"> 0 point</p>
+			</div>
+			<div class="flexContainer">
+				<p>Player 2 har:</p>
+				<p id="playerTwoScore"> 0 point</p>
+			</div>
+			<div class="flexContainer">
+				<p>Runde nummer:</p>
+				<p id="roundNumber"></p>
+				<p></p>
+			</div>
+			<div class="dice">
+				<img id="dice1" src="./assets/dice1.png" alt="Terning1" />
+				<img id="dice2" src="./assets/dice1.png" alt="Terning2" />
+				<p id="messageContainer">Start spillet</p>
+			</div>
+			<button id="trhowDices">Kast terningerne</button>
+			<button id="resetGame">Start spillet forfra</button>
+			<button> <a href="rules.html">Regler</a></button>
+		</div>
+	</body>
+</html>
