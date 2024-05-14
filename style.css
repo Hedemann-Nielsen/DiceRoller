@@ -43,3 +43,8 @@ a {
 	text-decoration: none;
 	color: aliceblue;
 }
+
+.rules-text {
+	margin: auto;
+	width: 50%;
+}

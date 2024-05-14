@@ -44,9 +44,8 @@ resetGameBtn.addEventListener("click", resetGame);
 
 //Kast terningerne
 function rollDices() {
-	randomNumber1 = Math.floor(Math.random() * 6) + 1;
-	randomNumber2 = Math.floor(Math.random() * 6) + 1;
-
+	randomNumber1 = Math.ceil(Math.random(1) * 6);
+	randomNumber2 = Math.ceil(Math.random(1) * 6);
 	dice1.src = `./assets/dice${randomNumber1}.png`;
 	dice2.src = `./assets/dice${randomNumber2}.png`;
 	console.log("terning kastet");
@@ -70,12 +69,15 @@ function updatePlayerScore(player, diceSum) {
 			playerOneScore.innerText = `${playerOne.totalScore} point`;
 			messageContainer.innerText = `Spiller 1 modtog ${diceSum} point`;
 			isPlayerOne = false;
+			trhowDicesBtn.innerText = "Spiller 2 - kaster terningen";
 			break;
 
 		case "PlayerTwo":
 			playerTwoScore.innerText = `${playerTwo.totalScore} point`;
 			messageContainer.innerText = `Spiller 2 modtog ${diceSum} point`;
 			isPlayerOne = true;
+			trhowDicesBtn.innerText = "Spiller 1 - kaster terningen";
+
 			break;
 
 		default:
@@ -142,7 +144,7 @@ function resetGame() {
 	playerTwo.totalScore = 0;
 	playerOneScore.innerText = `0 point`;
 	playerTwoScore.innerText = `0 point`;
-	messageContainer.innerText = `tryk på "Kast terningerne" for at starte`;
+	messageContainer.innerText = `Tryk på "Kast terningerne" for at starte`;
 	dice1.src = `./assets/dice1.png`;
 	dice2.src = `./assets/dice1.png`;
 
