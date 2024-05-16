@@ -5,20 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="./DiceRoller.js" defer></script>
 		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-
 		<link rel="stylesheet" href="./style.css" />
 		<title>Dice Roller</title>
 	</head>
 	<body>
 		<div class="centerContainer">
 			<div class="flexContainer">
-				<p>Player 1 har:</p>
-				<p id="playerOneScore"> 0 point</p>
+				<input type="text" id="playerName" placeholder="Indtast spiller navn" />
+				<button id="addPlayer">Tilføj Spiller</button>
 			</div>
-			<div class="flexContainer">
-				<p>Player 2 har:</p>
-				<p id="playerTwoScore"> 0 point</p>
-			</div>
+			<div id="playersContainer"></div>
 			<div class="flexContainer">
 				<p>Runde nummer:</p>
 				<p id="roundNumber"></p>
@@ -29,9 +25,14 @@
 				<img id="dice2" src="./assets/dice1.png" alt="Terning2" />
 				<p id="messageContainer">Tryk på "Kast terningerne" for at starte</p>
 			</div>
-			<button id="trhowDices">Kast terningerne</button>
-			<button id="resetGame">Start spillet forfra</button>
-			<button> <a href="rules.html">Regler</a></button>
+			<div>
+				<button id="throwDices">Kast terningerne</button>
+				<button id="resetGame">Start spillet forfra</button>
+			</div>
+			<div>
+				<button id="resetPlayers">Nulstil Spillere</button>
+				<button> <a href="rules.html">Regler</a></button>
+			</div>
 		</div>
 	</body>
 </html>

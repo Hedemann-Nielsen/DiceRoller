@@ -11,7 +11,9 @@ html {
 
 .flexContainer {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+
 	align-items: center;
 }
 .flexContainer:nth-child(3) {
@@ -22,8 +24,16 @@ html {
 	margin: 0;
 }
 
+#playersContainer {
+	display: flex;
+	justify-content: center;
+	/* border: solid 2px red; */
+}
+#playersContainer p {
+	padding: 5px;
+}
 button {
-	margin: 10px auto;
+	margin: 10px;
 	width: 200px;
 	background-color: #006ae8;
 	cursor: pointer;
@@ -47,4 +57,12 @@ a {
 .rules-text {
 	margin: auto;
 	width: 50%;
+}
+
+#playerName {
+	margin: 10px;
+	padding: 10px 15px;
+	text-align: center;
+	border: solid black 2px;
+	border-radius: 8px;
 }
